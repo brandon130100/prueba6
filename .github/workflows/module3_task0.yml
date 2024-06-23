@@ -1,0 +1,19 @@
+name: u3_tarea0
+
+on:
+  push:
+    branches: [ main ]
+  schedule:
+    - cron: 0 0 * * * # cada día a la medianoche
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Clona el repositorio
+        uses: actions/checkout@v3
+      - name: Sitúa en el directorio correcto
+        run: cd tarea0_u2
+      - name: Ejecuta el comando make help dentro del directorio correcto
+        run: make help
+        working-directory: tarea0_u2
