@@ -13,6 +13,7 @@ jobs:
         uses: actions/checkout@v3
       - name: Setup environment
         run: ./setup.sh
+        working-directory: tarea0_u2
       - name: Lint
         run: make lint
       - name: Build
