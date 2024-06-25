@@ -11,9 +11,6 @@ jobs:
     steps:
       - name: Clona repositorio
         uses: actions/checkout@v3
-      - name: Setup environment
-        working-directory: tarea0_u2
-        run: ./setup.sh
       - name: Lint
         working-directory: tarea0_u2
         run: make lint
