@@ -1,0 +1,25 @@
+name: u3_tarea1
+on:
+  push:
+    branches: [main]
+  schedule:
+    - cron: 0 0 * * *
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Clona repositorio
+        uses: actions/checkout@v3
+      - name: Setup environment
+        run: ./setup.sh
+      - name: Lint
+        run: make lint
+      - name: Build
+        run: make build
+      - name: Unit tests
+        run: make unit-tests
+      - name: Validate
+        run: make validate
+      - name: Integration tests
+        run: make integration-tests
