@@ -1,3 +1,3 @@
 #!/bin/bash
-apt-get update && apt-get install -y hugo make shellcheck
-
+sudo apt-get update
+sudo apt-get install -y hugo make shellcheck
