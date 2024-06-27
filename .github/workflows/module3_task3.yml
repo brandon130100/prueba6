@@ -38,7 +38,7 @@ jobs:
         if: startsWith(github.ref, 'refs/tags/1.')
         uses: softprops/action-gh-release@v1
         with:
-          files: awesome-website.zip
+          files: tarea0_u2/awesome-website.zip
           body_path: DEPLOY.md
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
