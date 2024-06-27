@@ -13,6 +13,7 @@ help: # Muestra la ayuda del Makefile
 
 lint: ##
 	shellcheck setup.sh
+	markdownlint README.md DEPLOY.md
 
 unit-tests:
 	echo "Ejecutando las pruebas unitarias..."
@@ -22,3 +23,7 @@ validate:
 
 integration-tests:
 	echo "Ejecutando las pruebas de integracion..."
+
+package:
+	hugo -d ../u2_tarea0/dist
+	zip -r awesome-website.zip ../u2_tarea0/dist awesome-api
