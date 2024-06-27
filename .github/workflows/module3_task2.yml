@@ -32,8 +32,8 @@ jobs:
       - name: Package
         working-directory: tarea0_u2
         run: make package
-      - name: Artifacts
-        if: success() && github.ref == 'refs/heads/main'
+      - name: Upload artifact
+        if: github.ref == 'refs/heads/main'
         working-directory: tarea0_u2
         uses: actions/upload-artifact@v2
         with:
