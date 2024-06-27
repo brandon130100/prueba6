@@ -36,6 +36,7 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: actions/upload-artifact@v4
         with:
+          working-directory: tarea0_u2
           name: awesome-website
           path: awesome-website.zip
 
