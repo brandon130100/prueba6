@@ -10,3 +10,7 @@
 ## Workflow
 Se utiliza Github Actions para que se lanze cuando hagan push y corra una vez al dia a las 12 de la noche  
 Y ademas cuenta con lint, build, unit tests, validation, and integration tests.
+
+
+## New Features
+Se agrego un nuevo post
